@@ -244,6 +244,38 @@ transform:scale(1.1);
 100%{transform:translateX(-50%)}
 }
 
+/* Linkedin CAROUSEL */
+
+.carousel{
+overflow:hidden;
+}
+
+.track{
+display:flex;
+gap:20px;
+animation:scroll 25s linear infinite;
+}
+
+.poster{
+min-width:240px;
+height:320px;
+background:linear-gradient(135deg,#1e3a8a,#6b21a8);
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:.4s;
+}
+
+.poster:hover{
+transform:scale(1.1);
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+  
 /* VIDEO REELS */
 
 .video-slider{
@@ -437,6 +469,26 @@ LinkedIn Optimization • Poster Design • AI Videos • Video Editing
 
 </div>
 
+<div class="container">
+
+<h2>LinkeedIn Portfolio</h2>
+
+<div class="carousel">
+
+<div class="track">
+
+<div class="poster">LinkeedIn</div>
+<div class="poster">LinkeedIn</div>
+<div class="poster">LinkeedIn</div>
+<div class="poster">LinkeedIn</div>
+<div class="poster">LinkeedIn</div>
+
+</div>
+
+</div>
+
+</div>
+  
 <div class="container">
 
 <h2>AI Video Projects</h2>
