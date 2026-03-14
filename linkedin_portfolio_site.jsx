@@ -1,11 +1,11 @@
+"use client";
+
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Video, Image, Sparkles, BarChart3, Briefcase, Play } from "lucide-react";
+import { Mail, Linkedin, Play, BarChart3, Sparkles, Briefcase } from "lucide-react";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-[#0a0f1f] to-black text-white scroll-smooth">
+    <div className="min-h-screen bg-gradient-to-b from-black via-[#0a0f1f] to-black text-white">
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-32 text-center">
@@ -27,116 +27,104 @@ export default function Portfolio() {
           LinkedIn Account Optimization • Poster Design • AI Videos • Video Editing
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="flex justify-center gap-6 mt-10"
-        >
-          <Button className="rounded-2xl text-lg px-8 py-6 bg-blue-600 hover:bg-blue-500 transition">View My Work</Button>
-          <Button variant="outline" className="rounded-2xl text-lg px-8 py-6 border-blue-500 text-blue-400 hover:bg-blue-500/10">Hire Me</Button>
-        </motion.div>
+        <div className="flex justify-center gap-6 mt-10">
+          <button className="rounded-xl text-lg px-8 py-4 bg-blue-600 hover:bg-blue-500 transition">
+            View My Work
+          </button>
+
+          <button className="rounded-xl text-lg px-8 py-4 border border-blue-500 text-blue-400 hover:bg-blue-500/10">
+            Hire Me
+          </button>
+        </div>
       </section>
 
-      {/* RESULTS SECTION */}
+      {/* RESULTS */}
       <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-14">Results Clients Care About</h2>
+
+        <h2 className="text-3xl font-bold text-center mb-14">
+          Results Clients Care About
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          <Card className="bg-neutral-900/80 backdrop-blur border border-blue-500/20 rounded-2xl text-center hover:border-blue-500/40 transition">
-            <CardContent className="p-10">
-              <BarChart3 className="mx-auto mb-4 text-blue-400" />
-              <h3 className="text-4xl font-bold text-blue-300">3x</h3>
-              <p className="text-gray-400 mt-2">Profile Visibility Growth</p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-neutral-900/80 backdrop-blur border border-blue-500/20 rounded-2xl text-center hover:border-blue-500/40 transition">
-            <CardContent className="p-10">
-              <Sparkles className="mx-auto mb-4 text-purple-400" />
-              <h3 className="text-4xl font-bold text-purple-300">High</h3>
-              <p className="text-gray-400 mt-2">Content Engagement</p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-neutral-900/80 backdrop-blur border border-blue-500/20 rounded-2xl text-center hover:border-blue-500/40 transition">
-            <CardContent className="p-10">
-              <Briefcase className="mx-auto mb-4 text-blue-400" />
-              <h3 className="text-4xl font-bold text-blue-300">More</h3>
-              <p className="text-gray-400 mt-2">Client Opportunities</p>
-            </CardContent>
-          </Card>
-
-        </div>
-      </section>
-
-      {/* LINKEDIN STRATEGY SECTION */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-
-        <h2 className="text-3xl font-bold mb-14 text-center">LinkedIn Growth Strategy</h2>
-
-        <div className="grid md:grid-cols-3 gap-8">
-
-          <Card className="bg-neutral-900/80 backdrop-blur border border-blue-500/20 rounded-2xl hover:border-blue-500/40 transition">
-            <CardContent className="p-8">
-              <h3 className="font-semibold text-xl mb-3 text-blue-300">Profile Positioning</h3>
-              <p className="text-gray-400">Optimizing headline, banner, about section and profile layout to attract ideal clients.</p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-neutral-900/80 backdrop-blur border border-blue-500/20 rounded-2xl hover:border-blue-500/40 transition">
-            <CardContent className="p-8">
-              <h3 className="font-semibold text-xl mb-3 text-purple-300">Content Strategy</h3>
-              <p className="text-gray-400">Designing engaging LinkedIn content including posters and storytelling visuals.</p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-neutral-900/80 backdrop-blur border border-blue-500/20 rounded-2xl hover:border-blue-500/40 transition">
-            <CardContent className="p-8">
-              <h3 className="font-semibold text-xl mb-3 text-blue-300">Growth System</h3>
-              <p className="text-gray-400">Consistent content and optimized profile positioning to increase visibility and authority.</p>
-            </CardContent>
-          </Card>
-
-        </div>
-
-      </section>
-
-      {/* BEFORE AFTER SECTION */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-
-        <h2 className="text-3xl font-bold text-center mb-14">LinkedIn Profile Transformation</h2>
-
-        <div className="grid md:grid-cols-2 gap-10">
-
-          <div className="bg-neutral-900/80 border border-red-500/20 rounded-2xl p-6">
-            <p className="text-red-300 mb-4">Before Optimization</p>
-            <div className="aspect-video bg-black rounded-lg flex items-center justify-center text-gray-500">
-              Before Profile
-            </div>
+          <div className="bg-neutral-900 border border-blue-500/20 rounded-2xl p-10 text-center">
+            <BarChart3 className="mx-auto mb-4 text-blue-400"/>
+            <h3 className="text-4xl font-bold text-blue-300">3x</h3>
+            <p className="text-gray-400 mt-2">Profile Visibility Growth</p>
           </div>
 
-          <div className="bg-neutral-900/80 border border-green-500/20 rounded-2xl p-6">
-            <p className="text-green-300 mb-4">After Optimization</p>
-            <div className="aspect-video bg-black rounded-lg flex items-center justify-center text-gray-500">
-              After Profile
-            </div>
+          <div className="bg-neutral-900 border border-purple-500/20 rounded-2xl p-10 text-center">
+            <Sparkles className="mx-auto mb-4 text-purple-400"/>
+            <h3 className="text-4xl font-bold text-purple-300">High</h3>
+            <p className="text-gray-400 mt-2">Content Engagement</p>
+          </div>
+
+          <div className="bg-neutral-900 border border-blue-500/20 rounded-2xl p-10 text-center">
+            <Briefcase className="mx-auto mb-4 text-blue-400"/>
+            <h3 className="text-4xl font-bold text-blue-300">More</h3>
+            <p className="text-gray-400 mt-2">Client Opportunities</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* LINKEDIN STRATEGY */}
+      <section className="max-w-6xl mx-auto px-6 py-24">
+
+        <h2 className="text-3xl font-bold text-center mb-14">
+          LinkedIn Growth Strategy
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="bg-neutral-900 border border-blue-500/20 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold text-blue-300 mb-3">
+              Profile Optimization
+            </h3>
+            <p className="text-gray-400">
+              Optimizing headline, banner, about section and profile layout
+              to attract ideal clients.
+            </p>
+          </div>
+
+          <div className="bg-neutral-900 border border-purple-500/20 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold text-purple-300 mb-3">
+              Content Strategy
+            </h3>
+            <p className="text-gray-400">
+              Designing engaging LinkedIn content including posters
+              and storytelling visuals.
+            </p>
+          </div>
+
+          <div className="bg-neutral-900 border border-blue-500/20 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold text-blue-300 mb-3">
+              Growth System
+            </h3>
+            <p className="text-gray-400">
+              Consistent content and optimized positioning to increase
+              visibility and authority.
+            </p>
           </div>
 
         </div>
 
       </section>
 
-      {/* SCROLLING POSTER PORTFOLIO */}
+      {/* POSTERS */}
       <section className="py-24">
 
-        <h2 className="text-3xl font-bold text-center mb-14">Poster Portfolio</h2>
+        <h2 className="text-3xl font-bold text-center mb-14">
+          Poster Portfolio
+        </h2>
 
         <div className="flex gap-6 overflow-x-auto px-6">
 
-          {[1,2,3,4,5].map((item)=> (
-            <div key={item} className="min-w-[260px] h-[320px] bg-gradient-to-br from-blue-900/40 to-purple-900/30 border border-blue-500/20 rounded-2xl flex items-center justify-center text-gray-300">
+          {[1,2,3,4,5].map((item)=>(
+            <div
+              key={item}
+              className="min-w-[260px] h-[320px] bg-gradient-to-br from-blue-900/40 to-purple-900/30 border border-blue-500/20 rounded-2xl flex items-center justify-center"
+            >
               Poster
             </div>
           ))}
@@ -145,17 +133,22 @@ export default function Portfolio() {
 
       </section>
 
-      {/* AI VIDEO SECTION */}
+      {/* AI VIDEOS */}
       <section className="max-w-6xl mx-auto px-6 py-24">
 
-        <h2 className="text-3xl font-bold mb-12">AI Video Projects</h2>
+        <h2 className="text-3xl font-bold mb-12">
+          AI Video Projects
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          {[1,2,3].map((item)=> (
+          {[1,2,3].map((item)=>(
             <div key={item} className="relative group">
+
               <div className="aspect-video bg-gradient-to-br from-blue-900/40 to-purple-900/30 border border-blue-500/20 rounded-2xl"></div>
-              <Play className="absolute inset-0 m-auto text-blue-300 opacity-80 group-hover:scale-110 transition" />
+
+              <Play className="absolute inset-0 m-auto text-blue-300 group-hover:scale-110 transition"/>
+
             </div>
           ))}
 
@@ -166,14 +159,19 @@ export default function Portfolio() {
       {/* VIDEO EDITING */}
       <section className="max-w-6xl mx-auto px-6 py-24">
 
-        <h2 className="text-3xl font-bold mb-12">Video Editing Projects</h2>
+        <h2 className="text-3xl font-bold mb-12">
+          Video Editing Projects
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
 
-          {[1,2].map((item)=> (
+          {[1,2].map((item)=>(
             <div key={item} className="relative group">
+
               <div className="aspect-video bg-gradient-to-br from-blue-900/40 to-purple-900/30 border border-blue-500/20 rounded-2xl"></div>
-              <Play className="absolute inset-0 m-auto text-blue-300 opacity-80 group-hover:scale-110 transition" />
+
+              <Play className="absolute inset-0 m-auto text-blue-300 group-hover:scale-110 transition"/>
+
             </div>
           ))}
 
@@ -181,10 +179,12 @@ export default function Portfolio() {
 
       </section>
 
-      {/* CTA */}
+      {/* CONTACT */}
       <section className="max-w-4xl mx-auto px-6 py-28 text-center">
 
-        <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text">Let's Grow Your LinkedIn Presence</h2>
+        <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text">
+          Let's Grow Your LinkedIn Presence
+        </h2>
 
         <p className="text-gray-300 mb-10">
           If you're looking for LinkedIn optimization, engaging content,
@@ -193,13 +193,13 @@ export default function Portfolio() {
 
         <div className="flex justify-center gap-6">
 
-          <Button className="rounded-2xl flex gap-2 text-lg px-8 py-6 bg-blue-600 hover:bg-blue-500">
+          <button className="flex gap-2 items-center rounded-xl px-8 py-4 bg-blue-600 hover:bg-blue-500">
             <Mail size={18}/> Contact Me
-          </Button>
+          </button>
 
-          <Button variant="outline" className="rounded-2xl flex gap-2 text-lg px-8 py-6 border-blue-500 text-blue-400 hover:bg-blue-500/10">
+          <button className="flex gap-2 items-center rounded-xl px-8 py-4 border border-blue-500 text-blue-400 hover:bg-blue-500/10">
             <Linkedin size={18}/> LinkedIn
-          </Button>
+          </button>
 
         </div>
 
