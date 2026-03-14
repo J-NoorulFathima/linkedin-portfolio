@@ -449,20 +449,37 @@ LinkedIn Optimization • Poster Design • AI Videos • Video Editing
 </div>
 
 </div>
-</div>
+/* VIDEO SLIDER */
 
-<div class="container">
+.video-slider{
+display:flex;
+overflow-x:auto;
+gap:20px;
+scroll-snap-type:x mandatory;
+margin-top:30px;
+}
 
-<h2>Video Editing</h2>
+.video-card{
+flex:0 0 260px;
+scroll-snap-align:center;
+}
 
-<div class="grid">
+.video{
+aspect-ratio:9/16;
+border-radius:18px;
+overflow:hidden;
+background:black;
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
-<div class="video">▶</div>
-<div class="video">▶</div>
-
-</div>
-
-</div>
+.video video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+  
 <footer>
 
 © 2026 LinkedIn Portfolio
