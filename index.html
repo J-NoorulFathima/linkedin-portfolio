@@ -40,13 +40,55 @@ border:1px solid rgba(255,255,255,0.15);
 backdrop-filter:blur(6px);
 }
 
-/* zoom */
+/* ===== CLICK ZOOM VIEW ===== */
 
-.poster:hover,
-.video-card:hover,
-.testimonial:hover{
-transform:scale(1.08);
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
+.zoom-box{
+position:relative;
+cursor:pointer;
+}
+
+.zoom-icon{
+position:absolute;
+top:8px;
+right:8px;
+background:rgba(0,0,0,0.6);
+padding:4px 6px;
+border-radius:6px;
+font-size:14px;
+opacity:0;
+transition:0.3s;
+}
+
+.zoom-box:hover .zoom-icon{
+opacity:1;
+}
+
+.zoom-view{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.zoom-view img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+.zoom-view span{
+position:absolute;
+top:20px;
+right:30px;
+font-size:30px;
+cursor:pointer;
+color:white;
 }
 
 /* images */
@@ -448,32 +490,163 @@ LinkedIn Optimization • Poster Design • AI Videos • Video Editing
 
 <div class="track">
 
-<div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img1.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+<div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img1.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img1.png">
+
 </div>
-<div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img2.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+
 </div>
+  
+<div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img2.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img2.png">
+
+</div>
+
+</div>
+  
 <div class="poster">
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img3.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+</div><div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img3.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img3.png">
+
 </div>
-<div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img4.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+
 </div>
-<div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img5.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+  
+<div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img4.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img4.png">
+
 </div>
-<div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img6.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+
 </div>
-<div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img7.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+<div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img5.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img5.png">
+
 </div>
-<div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img8.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+
 </div>
-<div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img9.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+<div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img6.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img6.png">
+
+</div>
+
+</div>
+<div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img7.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img7.png">
+
+</div>
+
+</div>
+<div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img8.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img8.png">
+
+</div>
+
+</div>
+<div class="poster zoom-box">
+
+<div class="zoom-icon">🔍</div>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img9.png"
+onclick="this.nextElementSibling.style.display='flex'">
+
+<div class="zoom-view"
+onclick="this.style.display='none'">
+
+<span>✖</span>
+
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img9.png">
+
+</div>
+
 </div>
 
 </div>
