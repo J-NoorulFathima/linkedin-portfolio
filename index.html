@@ -10,6 +10,82 @@
 
 <style>
 
+/* ===== PREMIUM PORTFOLIO SLIDER ===== */
+
+.carousel,
+.video-slider,
+.testimonial-slider{
+overflow-x:auto;
+padding:10px 5px 15px 5px;
+scroll-behavior:smooth;
+}
+
+.track,
+.testimonial-track{
+display:flex;
+gap:20px;
+width:max-content;
+}
+
+/* cards */
+
+.poster,
+.video-card,
+.testimonial{
+transition:0.35s;
+border-radius:16px;
+overflow:hidden;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(6px);
+}
+
+/* zoom */
+
+.poster:hover,
+.video-card:hover,
+.testimonial:hover{
+transform:scale(1.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* images */
+
+.poster img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:16px;
+}
+
+/* video */
+
+.video-card video{
+width:100%;
+border-radius:16px;
+}
+
+/* scrollbar */
+
+.carousel::-webkit-scrollbar,
+.video-slider::-webkit-scrollbar,
+.testimonial-slider::-webkit-scrollbar{
+height:8px;
+}
+
+.carousel::-webkit-scrollbar-track,
+.video-slider::-webkit-scrollbar-track,
+.testimonial-slider::-webkit-scrollbar-track{
+background:#020617;
+}
+
+.carousel::-webkit-scrollbar-thumb,
+.video-slider::-webkit-scrollbar-thumb,
+.testimonial-slider::-webkit-scrollbar-thumb{
+background:linear-gradient(90deg,#2563eb,#60a5fa);
+border-radius:10px;
+}
+
 /* GLOBAL */
 
 *{
@@ -211,78 +287,8 @@ font-size:30px;
 color:#60a5fa;
 margin-bottom:10px;
 }
-
-/* POSTER CAROUSEL */
-
-.carousel{
-overflow:hidden;
-}
-
-.track{
-display:flex;
-gap:20px;
-animation:scroll 25s linear infinite;
-}
-
-.poster{
-min-width:240px;
-height:320px;
-background:linear-gradient(135deg,#1e3a8a,#6b21a8);
-border-radius:14px;
-display:flex;
-align-items:center;
-justify-content:center;
-transition:.4s;
-}
-
-.poster:hover{
-transform:scale(1.1);
-}
-
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
-}
-
-/* Linkedin CAROUSEL */
-
-.carousel{
-overflow:hidden;
-}
-
-.track{
-display:flex;
-gap:20px;
-animation:scroll 25s linear infinite;
-}
-
-.poster{
-min-width:240px;
-height:320px;
-background:linear-gradient(135deg,#1e3a8a,#6b21a8);
-border-radius:14px;
-display:flex;
-align-items:center;
-justify-content:center;
-transition:.4s;
-}
-
-.poster:hover{
-transform:scale(1.1);
-}
-
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
-}
   
 /* VIDEO REELS */
-
-.video-slider{
-display:flex;
-gap:20px;
-overflow-x:auto;
-}
 
 .video-card{
 flex:0 0 260px;
@@ -315,16 +321,6 @@ box-shadow:0 0 25px rgba(96,165,250,.4);
 
 /* TESTIMONIALS */
 
-.testimonial-slider{
-overflow:hidden;
-}
-
-.testimonial-track{
-display:flex;
-gap:20px;
-animation:testimonials 20s linear infinite;
-}
-
 .testimonial{
 min-width:260px;
 background:#0f172a;
@@ -336,11 +332,6 @@ border:1px solid #1e293b;
 .testimonial h4{
 margin-top:10px;
 color:#60a5fa;
-}
-
-@keyframes testimonials{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
 }
 
 /* CTA */
@@ -734,6 +725,7 @@ LinkedIn Optimization • Poster Design • AI Videos • Video Editing
 
 <footer>
 
+Zeltria_vision
 © 2026 LinkedIn Portfolio
 
 </footer>
