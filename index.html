@@ -526,19 +526,34 @@ LinkedIn Optimization • Poster Design • AI Videos • Video Editing
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img1.png">
 
 <button class="zoom-btn"
-onclick="this.nextElementSibling.style.display='flex'">
+onclick="openImg(this)">
 ⛶
 </button>
 
-<div class="img-view"
-onclick="this.style.display='none'">
+<div class="img-view">
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img1.png">
 
-</div>
+<button onclick="closeImg(this)"
+style="
+position:absolute;
+top:20px;
+right:20px;
+padding:8px 12px;
+background:black;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:6px;
+">
+✕
+</button>
 
 </div>
 
+</div>
+
+  
   
 <div class="poster">
 
@@ -945,6 +960,17 @@ onclick="this.style.display='none'">
 © 2026 LinkedIn Portfolio
 
 </footer>
+<script>
 
+function openImg(btn){
+let view = btn.parentElement.querySelector(".img-view");
+view.style.display = "flex";
+}
+
+function closeImg(btn){
+btn.parentElement.style.display = "none";
+}
+
+</script>
 </body>
 </html>
