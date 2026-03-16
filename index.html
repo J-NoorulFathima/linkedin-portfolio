@@ -40,6 +40,21 @@ border:1px solid rgba(255,255,255,0.15);
 backdrop-filter:blur(6px);
 }
 
+/* FIX SIZE */
+
+.poster{
+min-width:240px;
+height:320px;
+}
+
+.video-card{
+min-width:260px;
+}
+
+.testimonial{
+min-width:260px;
+}
+
 /* ===== CLICK ZOOM VIEW ===== */
 
 .zoom-box{
@@ -400,6 +415,46 @@ color:#64748b;
 padding:40px;
 }
 
+  /* ===== SIZE FIX ===== */
+
+/* poster size */
+
+.poster{
+min-width:240px !important;
+height:320px !important;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* poster image */
+
+.poster img{
+width:100% !important;
+height:100% !important;
+object-fit:contain !important;
+}
+
+/* video size */
+
+.video-card{
+min-width:260px !important;
+max-width:260px !important;
+}
+
+.video-card video{
+width:100% !important;
+max-height:360px !important;
+object-fit:contain !important;
+}
+
+/* testimonial size */
+
+.testimonial{
+min-width:260px !important;
+max-width:260px !important;
+}
+  
 </style>
 </head>
 
