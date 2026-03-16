@@ -10,139 +10,6 @@
 
 <style>
 
-/* ===== PREMIUM PORTFOLIO SLIDER ===== */
-
-.carousel,
-.video-slider,
-.testimonial-slider{
-overflow-x:auto;
-padding:10px 5px 15px 5px;
-scroll-behavior:smooth;
-}
-
-.track,
-.testimonial-track{
-display:flex;
-gap:20px;
-width:max-content;
-}
-
-/* cards */
-
-.poster,
-.video-card,
-.testimonial{
-transition:0.35s;
-border-radius:16px;
-overflow:hidden;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.15);
-backdrop-filter:blur(6px);
-}
-
-/* FIX SIZE */
-
-.poster{
-min-width:240px;
-height:320px;
-}
-
-.video-card{
-min-width:260px;
-}
-
-.testimonial{
-min-width:260px;
-}
-
-/* ===== CLICK ZOOM VIEW ===== */
-
-.zoom-box{
-position:relative;
-cursor:pointer;
-}
-
-.zoom-icon{
-position:absolute;
-top:8px;
-right:8px;
-background:rgba(0,0,0,0.6);
-padding:4px 6px;
-border-radius:6px;
-font-size:14px;
-opacity:0;
-transition:0.3s;
-}
-
-.zoom-box:hover .zoom-icon{
-opacity:1;
-}
-
-.zoom-view{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
-
-.zoom-view img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
-}
-
-.zoom-view span{
-position:absolute;
-top:20px;
-right:30px;
-font-size:30px;
-cursor:pointer;
-color:white;
-}
-
-/* images */
-
-.poster img{
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:16px;
-}
-
-/* video */
-
-.video-card video{
-width:100%;
-border-radius:16px;
-}
-
-/* scrollbar */
-
-.carousel::-webkit-scrollbar,
-.video-slider::-webkit-scrollbar,
-.testimonial-slider::-webkit-scrollbar{
-height:8px;
-}
-
-.carousel::-webkit-scrollbar-track,
-.video-slider::-webkit-scrollbar-track,
-.testimonial-slider::-webkit-scrollbar-track{
-background:#020617;
-}
-
-.carousel::-webkit-scrollbar-thumb,
-.video-slider::-webkit-scrollbar-thumb,
-.testimonial-slider::-webkit-scrollbar-thumb{
-background:linear-gradient(90deg,#2563eb,#60a5fa);
-border-radius:10px;
-}
-
 /* GLOBAL */
 
 *{
@@ -344,8 +211,78 @@ font-size:30px;
 color:#60a5fa;
 margin-bottom:10px;
 }
+
+/* POSTER CAROUSEL */
+
+.carousel{
+overflow:hidden;
+}
+
+.track{
+display:flex;
+gap:20px;
+animation:scroll 25s linear infinite;
+}
+
+.poster{
+min-width:240px;
+height:320px;
+background:linear-gradient(135deg,#1e3a8a,#6b21a8);
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:.4s;
+}
+
+.poster:hover{
+transform:scale(1.1);
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+
+/* Linkedin CAROUSEL */
+
+.carousel{
+overflow:hidden;
+}
+
+.track{
+display:flex;
+gap:20px;
+animation:scroll 25s linear infinite;
+}
+
+.poster{
+min-width:240px;
+height:320px;
+background:linear-gradient(135deg,#1e3a8a,#6b21a8);
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:.4s;
+}
+
+.poster:hover{
+transform:scale(1.1);
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
   
 /* VIDEO REELS */
+
+.video-slider{
+display:flex;
+gap:20px;
+overflow-x:auto;
+}
 
 .video-card{
 flex:0 0 260px;
@@ -378,6 +315,16 @@ box-shadow:0 0 25px rgba(96,165,250,.4);
 
 /* TESTIMONIALS */
 
+.testimonial-slider{
+overflow:hidden;
+}
+
+.testimonial-track{
+display:flex;
+gap:20px;
+animation:testimonials 20s linear infinite;
+}
+
 .testimonial{
 min-width:260px;
 background:#0f172a;
@@ -389,6 +336,11 @@ border:1px solid #1e293b;
 .testimonial h4{
 margin-top:10px;
 color:#60a5fa;
+}
+
+@keyframes testimonials{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
 }
 
 /* CTA */
@@ -415,46 +367,6 @@ color:#64748b;
 padding:40px;
 }
 
-  /* ===== SIZE FIX ===== */
-
-/* poster size */
-
-.poster{
-min-width:240px !important;
-height:320px !important;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-/* poster image */
-
-.poster img{
-width:100% !important;
-height:100% !important;
-object-fit:contain !important;
-}
-
-/* video size */
-
-.video-card{
-min-width:260px !important;
-max-width:260px !important;
-}
-
-.video-card video{
-width:100% !important;
-max-height:360px !important;
-object-fit:contain !important;
-}
-
-/* testimonial size */
-
-.testimonial{
-min-width:260px !important;
-max-width:260px !important;
-}
-  
 </style>
 </head>
 
@@ -545,164 +457,177 @@ LinkedIn Optimization • Poster Design • AI Videos • Video Editing
 
 <div class="track">
 
-<div class="poster zoom-box">
+<div class="poster">
 
-<div class="zoom-icon">🔍</div>
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img1.png">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img1.png"
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img1.png">
 
 </div>
 
 </div>
+
   
-<div class="poster zoom-box">
+<div class="poster">
 
-<div class="zoom-icon">🔍</div>
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img2.png">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img2.png"
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img2.png">
 
 </div>
 
 </div>
+
   
 <div class="poster">
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img3.png" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
-</div><div class="poster zoom-box">
 
-<div class="zoom-icon">🔍</div>
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img3.png">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img3.png"
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img3.png">
 
 </div>
 
 </div>
+
   
-<div class="poster zoom-box">
+<div class="poster">
 
-<div class="zoom-icon">🔍</div>
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img4.png">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img4.png"
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img4.png">
 
 </div>
 
 </div>
-<div class="poster zoom-box">
 
-<div class="zoom-icon">🔍</div>
+  
+<div class="poster">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img5.png"
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img5.png">
+
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img5.png">
 
 </div>
 
 </div>
-<div class="poster zoom-box">
 
-<div class="zoom-icon">🔍</div>
+  
+<div class="poster">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img6.png"
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img6.png">
+
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img6.png">
 
 </div>
 
 </div>
-<div class="poster zoom-box">
 
-<div class="zoom-icon">🔍</div>
+  
+<div class="poster">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img7.png"
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img7.png">
+
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img7.png">
 
 </div>
 
 </div>
-<div class="poster zoom-box">
 
-<div class="zoom-icon">🔍</div>
+  
+<div class="poster">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img8.png"
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img8.png">
+
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img8.png">
 
 </div>
 
 </div>
-<div class="poster zoom-box">
 
-<div class="zoom-icon">🔍</div>
+  
+<div class="poster">
 
-<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img9.png"
+<img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img9.png">
+
+<button class="zoom-btn"
 onclick="this.nextElementSibling.style.display='flex'">
+⛶
+</button>
 
-<div class="zoom-view"
+<div class="img-view"
 onclick="this.style.display='none'">
-
-<span>✖</span>
 
 <img src="https://raw.githubusercontent.com/J-NoorulFathima/linkedin-portfolio/main/Img9.png">
 
 </div>
 
 </div>
+
+  
 
 </div>
 
@@ -953,7 +878,6 @@ onclick="this.style.display='none'">
 
 <footer>
 
-Zeltria_vision
 © 2026 LinkedIn Portfolio
 
 </footer>
