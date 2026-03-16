@@ -315,6 +315,51 @@ box-shadow:0 0 25px rgba(96,165,250,.4);
 
 /* TESTIMONIALS */
 
+body {
+    background: #071a2b;
+    padding: 20px;
+}
+
+/* container */
+.slider-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+/* sliding row */
+.slider {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+}
+
+/* images */
+.slider img {
+    width: 260px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* scrollbar style */
+.slider-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider-container::-webkit-scrollbar-track {
+    background: #cfcfcf;
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.slider-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .testimonial-slider{
 overflow:hidden;
 }
